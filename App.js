@@ -64,6 +64,10 @@ const App = () => {
     setFilter(filter);
   };
 
+  const onCheckboxPress = (id) => {
+    toggleTodo(id);
+  }
+
   const filteredTodos = todos.filter((todo) => {
     if (filter === "completed") return todo.completed;
     if (filter === "nonCompleted") return !todo.completed;
@@ -123,7 +127,8 @@ const App = () => {
           <TodoList
             todos={filteredTodos}
             onPress={toggleTodo}
-            onDelete={onDelete}
+            onDelete={onDelete} 
+            onCheckboxPress={onCheckboxPress}
           />
         </ScrollView>
       </SafeAreaView>
