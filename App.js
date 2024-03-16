@@ -123,6 +123,7 @@ const App = () => {
             todos={filteredTodos}
             onPress={toggleTodo}
             onDelete={onDelete}
+            onCheckboxPress={toggleTodo}
           />
         </ScrollView>
       </View>
