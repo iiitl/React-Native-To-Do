@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import TodoList from "./components/TodoList";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -63,7 +64,7 @@ const App = () => {
   });
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Todo App</Text>
       <Text style={styles.heading}>Add Todo</Text>
       <View style={styles.inputContainer}>
@@ -117,7 +118,7 @@ const App = () => {
           onDelete={onDelete}
         />
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -159,7 +160,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "bold",
     marginBottom: 16,
-    marginTop: 30,
+    // marginTop: 30,
     textAlign: "center",
   },
 });
