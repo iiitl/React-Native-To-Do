@@ -159,6 +159,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "bold",
     marginBottom: 16,
+    marginTop: 30,
     textAlign: "center",
   },
 });
