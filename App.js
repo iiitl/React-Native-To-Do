@@ -117,7 +117,7 @@ const App = () => {
           </TouchableOpacity>
         </View>
 
-        <ScrollView>
+        
           <Text style={styles.heading}>Todos</Text>
           <TodoList
             todos={filteredTodos}
@@ -125,7 +125,7 @@ const App = () => {
             onDelete={onDelete}
             onCheckboxPress={toggleTodo}
           />
-        </ScrollView>
+        
       </View>
     </TouchableWithoutFeedback>
   );
