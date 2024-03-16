@@ -11,6 +11,11 @@ import {
   Keyboard,
 } from "react-native";
 import TodoList from "./components/TodoList";
+import * as SplashScreen from 'expo-splash-screen';
+
+SplashScreen.preventAutoHideAsync();
+setTimeout(SplashScreen.hideAsync, 5000);
+
 
 const App = () => {
   const [todos, setTodos] = useState([]);
