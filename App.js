@@ -56,8 +56,8 @@ const App = () => {
     setFilter(filter);
   };
 const onCheckboxPress = (id) =>{
-  
   toggleTodo(id);
+  
 
   
 };
