@@ -55,7 +55,12 @@ const App = () => {
   const filterTodos = (filter) => {
     setFilter(filter);
   };
+const onCheckboxPress = (id) =>{
+  
 
+  toggleTodo(id);
+  
+};
   const filteredTodos = todos.filter((todo) => {
     if (filter === "completed") return todo.completed;
     if (filter === "nonCompleted") return !todo.completed;
@@ -115,6 +120,7 @@ const App = () => {
           todos={filteredTodos}
           onPress={toggleTodo}
           onDelete={onDelete}
+          onCheckboxPress={onCheckboxPress}
         />
       </ScrollView>
     </View>
