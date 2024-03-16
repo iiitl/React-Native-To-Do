@@ -4,11 +4,11 @@ This is a simple Todo List application built with React Native.
 
 ## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/PavanaSakethaRam/React-Native-To-Do
-```
-2. Install the dependencies:
+1. Fork the repository.
+
+2. Clone the forked repository.
+   
+3. Install the dependencies:
 ```bash
 npm install
 ```
@@ -20,6 +20,10 @@ To run the app:
 ```bash
 npm start
 ```
+
+
+To view the app:
+refer (https://docs.expo.dev/get-started/expo-go/)
 
 ## Features
 
