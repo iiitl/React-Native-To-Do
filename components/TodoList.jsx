@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList, View } from 'react-native';
 import Todo from './Todo';
 
-const TodoList = ({ todos, onPress, onCheckboxPress }) => {
+const TodoList = ({ todos, onPress,onDelete, onCheckboxPress }) => {
   return (
     <View>
       <FlatList
