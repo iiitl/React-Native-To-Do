@@ -7,6 +7,8 @@ import {
   Text,
   ScrollView,
   TouchableOpacity,
+  TouchableWithoutFeedback,
+  Keyboard,
 } from "react-native";
 import TodoList from "./components/TodoList";
 
@@ -63,61 +65,63 @@ const App = () => {
   });
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Todo App</Text>
-      <Text style={styles.heading}>Add Todo</Text>
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Title"
-          value={title}
-          onChangeText={(text) => setTitle(text)}
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Description"
-          value={description}
-          onChangeText={(text) => setDescription(text)}
-        />
-        <Button title="Add Todo" onPress={addTodo} />
-      </View>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <View style={styles.container}>
+        <Text style={styles.title}>Todo App</Text>
+        <Text style={styles.heading}>Add Todo</Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Title"
+            value={title}
+            onChangeText={(text) => setTitle(text)}
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="Description"
+            value={description}
+            onChangeText={(text) => setDescription(text)}
+          />
+          <Button title="Add Todo" onPress={addTodo} />
+        </View>
 
-      <View style={styles.filterContainer}>
-        <TouchableOpacity
-          style={[styles.filterButton, filter === "all" && styles.activeFilter]}
-          onPress={() => filterTodos("all")}
-        >
-          <Text>All</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[
-            styles.filterButton,
-            filter === "completed" && styles.activeFilter,
-          ]}
-          onPress={() => filterTodos("completed")}
-        >
-          <Text>Completed</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[
-            styles.filterButton,
-            filter === "nonCompleted" && styles.activeFilter,
-          ]}
-          onPress={() => filterTodos("nonCompleted")}
-        >
-          <Text>Non Completed</Text>
-        </TouchableOpacity>
-      </View>
+        <View style={styles.filterContainer}>
+          <TouchableOpacity
+            style={[styles.filterButton, filter === "all" && styles.activeFilter]}
+            onPress={() => filterTodos("all")}
+          >
+            <Text>All</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.filterButton,
+              filter === "completed" && styles.activeFilter,
+            ]}
+            onPress={() => filterTodos("completed")}
+          >
+            <Text>Completed</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.filterButton,
+              filter === "nonCompleted" && styles.activeFilter,
+            ]}
+            onPress={() => filterTodos("nonCompleted")}
+          >
+            <Text>Non Completed</Text>
+          </TouchableOpacity>
+        </View>
 
-      <ScrollView>
-        <Text style={styles.heading}>Todos</Text>
-        <TodoList
-          todos={filteredTodos}
-          onPress={toggleTodo}
-          onDelete={onDelete}
-        />
-      </ScrollView>
-    </View>
+        <ScrollView>
+          <Text style={styles.heading}>Todos</Text>
+          <TodoList
+            todos={filteredTodos}
+            onPress={toggleTodo}
+            onDelete={onDelete}
+          />
+        </ScrollView>
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 
