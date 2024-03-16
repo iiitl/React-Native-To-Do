@@ -1,24 +1,18 @@
 # Todo List App
 
-Welcome to our Todo List application! This application is built with the powerful and efficient React Native framework. It's a simple yet feature-rich app that helps you manage your daily tasks with ease.
+This is a simple Todo List application built with React Native.
 
-## Getting Started
+## Installation
 
-Follow these steps to get the app up and running on your local machine:
+1. Fork the repository.
 
-### 1. Clone the Repository
-
-Start by cloning the repository to your local machine. You can do this by running the following command in your terminal:
-```bash
-git clone https://github.com/iiitl/React-Native-To-Do
-```
-### 2. Install Dependencies
-
-Navigate into the cloned repository and install the necessary dependencies by running:
+2. Clone the forked repository.
+   
+3. Install the dependencies:
 ```bash
 npm install
 ```
-   
+
 ### Usage
 
 To run the app:
@@ -29,14 +23,16 @@ npm start
 To view the app:
 refer (https://docs.expo.dev/get-started/expo-go/)
 
+
+To view the app:
+refer (https://docs.expo.dev/get-started/expo-go/)
+
 ## Features
 
-Our Todo List app comes with a variety of features to help you stay organized:
-
-- Add a New Todo: Keep track of your tasks by adding them to your list.
-- Mark a Todo as Completed: Finished a task? Mark it as completed with just a click!
-- Delete a Todo: Remove tasks that you no longer need.
-- Filter Todos: View your tasks based on their completion status.
+- Add a new todo
+- Mark a todo as completed
+- Delete a todo
+- Filter todos by their completion status
 
 ## Contributing
 
