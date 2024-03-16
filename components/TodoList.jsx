@@ -3,6 +3,7 @@ import { FlatList, View } from "react-native";
 import Todo from "./Todo";
 
 const TodoList = ({ todos, onPress, onCheckboxPress, onDelete }) => {
+
   return (
     <View>
       <FlatList
@@ -11,6 +12,7 @@ const TodoList = ({ todos, onPress, onCheckboxPress, onDelete }) => {
           item.id ? item.id.toString() : Math.random().toString()
         }
         renderItem={({ item }) => (
+
           <Todo
             todo={item}
             onPress={onPress}
