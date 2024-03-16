@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import TodoList from "./components/TodoList";
 import * as SplashScreen from 'expo-splash-screen';
+import { SafeAreaView } from "react-native-safe-area-context";
 
 SplashScreen.preventAutoHideAsync();
 setTimeout(SplashScreen.hideAsync, 5000);
@@ -71,7 +72,7 @@ const App = () => {
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <Text style={styles.title}>Todo App</Text>
         <Text style={styles.heading}>Add Todo</Text>
         <View style={styles.inputContainer}>
@@ -125,7 +126,7 @@ const App = () => {
             onDelete={onDelete}
           />
         </ScrollView>
-      </View>
+      </SafeAreaView>
     </TouchableWithoutFeedback>
   );
 };
