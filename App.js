@@ -122,15 +122,16 @@ const App = () => {
           </TouchableOpacity>
         </View>
 
-        <ScrollView>
+        
           <Text style={styles.heading}>Todos</Text>
           <TodoList
             todos={filteredTodos}
             onPress={toggleTodo}
-            onDelete={onDelete} 
-            onCheckboxPress={onCheckboxPress}
+            onDelete={onDelete}
+            onCheckboxPress={toggleTodo}
           />
-        </ScrollView>
+        
+      </View>
       </SafeAreaView>
     </TouchableWithoutFeedback>
   );
