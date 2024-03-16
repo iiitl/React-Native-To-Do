@@ -9,7 +9,7 @@ const TodoList = ({ todos, onPress,onDelete, onCheckboxPress }) => {
         data={todos}
         keyExtractor={(item) => (item.id ? item.id.toString() : Math.random().toString())}
         renderItem={({ item }) => (
-          <Todo todo={item} onPress={onPress} onCheckboxPress={onCheckboxPress} />
+          <Todo todo={item} onPress={onPress} onDelete={onDelete} onCheckboxPress={onCheckboxPress} />
         )}
       />
     </View>
