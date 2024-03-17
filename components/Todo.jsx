@@ -9,7 +9,7 @@ const Todo = ({ todo, onPress, onCheckboxPress, onDelete }) => {
           <View
             style={[
               styles.checkbox,
-              { backgroundColor: todo.completed ? '#007BFF' : 'transparent' },
+              { backgroundColor: todo.completed ? '#A7D397' : 'transparent' },
             ]}
           />
         </TouchableOpacity>
@@ -39,8 +39,8 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     borderRadius: 5,
-    borderWidth: 2,
-    borderColor: '#007BFF',
+    borderWidth: 1.5,
+    borderColor: '#535C91',
     marginRight: 16,
   },
   textContainer: {
@@ -49,13 +49,15 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: 'bold',
+    color:'#E5C287',
   },
   description: {
     marginTop: 8,
-    color: '#555',
+    color: 'white',
+    fontSize: 18,
   },
   deleteButton: {
-    backgroundColor: '#d9534f',
+    backgroundColor: '#D24545',
     padding: 8,
     borderRadius: 5,
   },
