@@ -5,7 +5,6 @@ import {
   Button,
   StyleSheet,
   Text,
-  ScrollView,
   TouchableOpacity,
   TouchableWithoutFeedback,
   Keyboard,
@@ -16,7 +15,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 SplashScreen.preventAutoHideAsync();
 setTimeout(SplashScreen.hideAsync, 5000);
-
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -63,6 +61,10 @@ const App = () => {
   const filterTodos = (filter) => {
     setFilter(filter);
   };
+
+  const onCheckboxPress = (id) => {
+    toggleTodo(id);
+  }
 
   const filteredTodos = todos.filter((todo) => {
     if (filter === "completed") return todo.completed;
@@ -139,7 +141,6 @@ const App = () => {
             onDelete={onDelete}
           />
         </ScrollView>
-        </View>
       </SafeAreaView>
     </TouchableWithoutFeedback>
   );
